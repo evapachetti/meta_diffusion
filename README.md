@@ -5,9 +5,9 @@ Official code for "Seeing More with Less: Meta-Learning and Diffusion Models for
 
 ## Run experiment 
 To run an experiment, modify the run.sh file accordingly. Job launch example:
-'''
+```
 sbatch --job-name exp1 -n 16 --gpus 2 -p long -o out.out -e err.err run.sh
-'''
+```
 
 ## Citation
 TBD
