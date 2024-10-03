@@ -45,7 +45,7 @@ for method in {'protonet','covnet','meta_deepbdc'}; do
       mkdir -p $OUTPUT_PATH
 
       # Run the training script
-      /home/eva.pachetti/miniconda3/envs/evaenv/bin/python meta_train.py --method $method --output_path "$OUTPUT_PATH" --image_size 128 \
+      python meta_train.py --method $method --output_path "$OUTPUT_PATH" --image_size 128 \
           --learning_rate $lr --weight_decay $wd --epoch $epochs --margin 0.5 --milestones 40 --n_shot $shot --n_query 5 --train_n_way 4 \
           --val_n_way 4 --num_classes 7 --train_n_episode $episodes --val_n_episode $episodes --reduce_dim 256 --csv_path_train "$TRAIN_PATH" \
           --csv_path_val "$VAL_PATH" --csv_path_test "$TEST_PATH" --num_scales 1000 --sde "$SDE" \
@@ -56,7 +56,7 @@ for method in {'protonet','covnet','meta_deepbdc'}; do
       CLS_CKP_PATH=$OUTPUT_PATH/cls_checkpoint.pth
 
       # Run the testing script
-      /home/eva.pachetti/miniconda3/envs/evaenv/bin/python test.py --method $method --output_path "$OUTPUT_PATH" --image_size 128 \
+      python test.py --method $method --output_path "$OUTPUT_PATH" --image_size 128 \
           --n_shot $shot --n_query 0 --test_n_way 4 --test_n_episode $episodes --csv_path_train "$TRAIN_PATH" \
           --csv_path_val "$VAL_PATH" --csv_path_test "$TEST_PATH" --num_scales 1000 --sde "$SDE" \
           --beta_min 0.1 --beta_max 20 --score_ckp_path "$SCORE_CKP_PATH" --cls_ckp_path "$CLS_CKP_PATH" \
