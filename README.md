@@ -10,4 +10,23 @@ sbatch --job-name exp1 -n 16 --gpus 2 -p long -o out.out -e err.err run.sh
 ```
 
 ## Citation
-TBD
+```
+@InProceedings{10.1007/978-3-031-73376-5_5,
+author="Pachetti, Eva
+and Colantonio, Sara",
+editor="Ali, Sharib
+and van der Sommen, Fons
+and Papie{\.{z}}, Bart{\l}omiej W{\l}adys{\l}aw
+and Ghatwary, Noha
+and Jin, Yueming
+and Kolenbrander, Iris",
+title="Seeing More with Less: Meta-learning and Diffusion Models for Tumor Characterization in Low-Data Settings",
+booktitle="Cancer Prevention, Detection, and Intervention",
+year="2025",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="48--58",
+isbn="978-3-031-73376-5"
+}
+```
+
