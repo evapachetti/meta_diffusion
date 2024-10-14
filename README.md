@@ -10,7 +10,7 @@ sbatch --job-name exp1 -n 16 --gpus 2 -p long -o out.out -e err.err run.sh
 ```
 
 ## Citation
-```
+```bibtex
 @InProceedings{10.1007/978-3-031-73376-5_5,
 author="Pachetti, Eva
 and Colantonio, Sara",
